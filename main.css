@@ -1,0 +1,273 @@
+
+:root {
+    --radius: clamp(1px, 3vw, 20px);
+    --primaryOrange: #D69E37;
+    --primaryPink: #B82584;
+    --primaryGreen: #008d49;
+    --LightGrey: #dfdfdf;
+    --Grey: #afafaf;
+    --cardFlex: 1.5;
+
+    --gradientAngle: 15deg;
+    --gradientAngleHover: 70deg;
+    --gradientAngleInverse: -15deg;
+    --gradientAngleHoverInverse: -70deg;
+    --defaultVariablePadding: clamp(10px, 3vw, 30px);
+    --border: clamp(0px, 1vw,3px);
+}
+
+@font-face {
+  font-family: frutiger;
+  src: url('Fonts/frutiger/Frutiger.ttf') format('truetype');
+}
+@font-face {
+  font-family: frutiger;
+  src: url('Fonts/frutiger/Frutiger_bold.ttf') format('truetype');
+  font-style: bold;
+}
+
+
+@font-face {
+    font-family: freeSans;
+    src: url('/Fonts/freesans/FreeSans.otf') format('opentype');
+    font-style: normal;
+}
+@font-face {
+    font-family: freeSans;
+    src: url('/Fonts/freesans/FreeSansBold.otf') format('opentype');
+    font-style: bold;
+}
+@font-face {
+    font-family: freeSans;
+    src: url('/Fonts/freesans/FreeSansBoldOblique.otf') format('opentype');
+    font-weight: bold;
+    font-style: oblique;
+}
+@font-face {
+    font-family: freeSans;
+    src: url('/Fonts/freesans/FreeSansOblique.otf') format('opentype');
+    font-style: oblique;
+}
+
+
+@font-face {
+    font-family: simSun;
+    src: url('Fonts/simsun/SIMSUN.ttf') format('truetype');
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: FreeMono;
+    src: url('Fonts/freeMono/FreeMono.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: FreeMono;
+    src: url('Fonts/freeMono/FreeMonoBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: FreeMono;
+    src: url('Fonts/freeMono/FreeMonoBoldOblique.ttf') format('truetype');
+    font-style: oblique;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: FreeMono;
+    src: url('Fonts/freeMono/FreeMonoOblique.ttf') format('truetype');
+    font-style: oblique;
+}
+
+
+
+body{
+    background-color: var(--LightGrey);
+    padding: 0%;
+    margin: 0%;
+}
+
+h1{
+    font-family: frutiger, sans-serif;
+}
+
+h2{
+    font-family: freeSans, sans-serif;
+    font-style: bold;
+}
+
+h3{
+    font-family: freeSans, sans-serif;
+}
+
+p{
+    font-family: FreeMono, monospace;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.oblique{
+    font-style: oblique;
+}
+
+
+.logo{
+    font-size: clamp(20px, 5vw, 80px);
+}
+    h1.logo {
+        margin: 0;
+    }
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--primaryOrange);
+    padding: 0.5%;
+    border-radius: 0px 0px var(--radius) var(--radius) ;
+    box-sizing: border-box;
+}
+
+.navPack {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.twoStack {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    padding: var(--radius);
+    overflow: hidden;
+    padding-bottom: clamp(50px, 5vw, 100px);
+}
+
+
+
+.twoStack.reverse {
+    display: flex;
+    text-align: justify;
+    flex-direction: row-reverse;
+    }
+
+    .twoStack.reverse .listImg{
+        margin-left: 0;
+        margin-right: var(--twoStackOverlap);
+    }
+
+.cardLink {
+    flex: var(--cardFlex);
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    transition: background 300ms;
+}
+    .cardLink:hover {
+       cursor: context-menu;
+        background: linear-gradient(var(--LightGrey), var(--LightGrey)) padding-box,
+                    linear-gradient(var(--gradientAngleHover), var(--LightGrey) 50%, var(--Grey)) border-box;
+    }
+
+    .twoStack.reverse .cardLink:hover {
+    background: linear-gradient(var(--LightGrey), var(--LightGrey)) padding-box,
+                linear-gradient(var(--gradientAngleHoverInverse), var(--LightGrey) 50%, var(--Grey)) border-box;
+    }
+
+.titleContainer{
+    flex: var(--cardFlex);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    padding: var(--radius) calc(var(--radius)*2);
+    margin-left: calc(-2 * var(--radius));
+    border: none;
+    border: var(--border) solid var(--Grey);
+    border-radius: var(--radius);
+}
+
+    .titleContainer.reverse{
+        margin-right: calc(-2 * var(--radius));
+    }
+
+    .titleContainer h1{
+        margin: var(--radius) 0 var(--radius) 0;
+        text-align: right;
+        font-size: clamp(20px, 5.5vw, 100px);
+        color: var(--primaryOrange);
+        padding-bottom: var(--defaultVariablePadding);
+    }
+    .titleContainer h2{
+        color: var(--primaryPink);
+        margin: 0;
+        font-size: clamp(10px, 2.5vw, 100px);
+        padding-bottom: var(--defaultVariablePadding);
+    }
+
+    .titleContainer h3{
+        color: var(--primaryGreen);
+        margin: 0;
+        font-size: clamp(10px, 2vw, 100px);
+        font-family: FreeMono;
+        font-weight: normal;
+        padding-bottom: var(--defaultVariablePadding);
+    }
+
+    .titleContainer p{
+        font-family: FreeMono, monospace;
+        font-weight: normal;
+        font-style: normal;
+        font-size: clamp(4px, 1.5vw, 20px);
+    }
+
+    .twoStack.reverse .titleContainer {
+        margin-left: 0;
+        margin-right: calc(-2 * var(--radius));
+        background: linear-gradient(var(--LightGrey), var(--LightGrey)) padding-box,
+                    linear-gradient(var(--gradientAngleInverse), var(--LightGrey) 50%, var(--Grey)) border-box;
+        justify-content: l;
+    }
+
+.listImg{
+    z-index: 1;
+    flex: 1;
+    border-radius: var(--radius);
+    margin-left: var(--twoStackOverlap);
+    pointer-events: none;
+    vertical-align: middle;
+}
+
+    .listImg img {
+        object-fit: contain;
+        width: 100%;
+        pointer-events: none;
+
+    }
+
+@media screen and (max-width: 768px) {
+    
+    .twoStack, .twoStack.reverse  {
+        flex-direction: column;
+    }
+
+    .listImg{
+        width: 100%;
+        margin-left: 0;
+        margin-top: calc(-1 * var(--radius));
+    }   
+    
+        .listImg img {
+            max-height: 300px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+}

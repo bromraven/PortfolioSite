@@ -1,0 +1,49 @@
+
+.center{
+    align-self: center;
+}
+
+.top{
+    align-self: flex-start;
+}
+
+.bottom{
+    align-self: flex-end;
+}
+
+.textContainer{
+    flex: 1.5;
+    background-color: var(--LightGrey);
+    padding: var(--radius); 
+    transition-property: all;
+    transition-duration: 300ms;
+    margin-left: calc(-1 * var(--radius));
+    border: var(--border) solid var(--Grey);
+    border-radius: var(--radius);
+}
+
+    .twoStack.reverse .textContainer{
+        margin-left: var(--radius);
+        margin-right: calc(-2 * var(--radius));
+        padding: calc(var(--radius) *2) ;
+    }
+
+    .textContainer p {
+        font-size: clamp(10px, 1.5vw, 20px);
+        padding: 0;
+        margin: 0;
+    }
+
+
+
+@media screen and (max-width: 768px) {
+
+    .titleContainer{
+        margin-left: 0;
+        }
+
+        .titleContainer p{
+            font-size: clamp(3px, 2vw, 30px);
+        }
+
+}
