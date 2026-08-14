@@ -37,7 +37,7 @@
 .gridcontainer{
     margin-top: var(--radius);
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
     border-radius: var(--radius);
     overflow: hidden;
     gap: var(--radius);
