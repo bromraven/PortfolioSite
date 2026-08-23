@@ -150,8 +150,6 @@ p{
     padding-bottom: clamp(50px, 5vw, 100px);
 }
 
-
-
 .twoStack.reverse {
     display: flex;
     text-align: justify;
@@ -233,7 +231,7 @@ p{
         margin-right: calc(-2 * var(--radius));
         background: linear-gradient(var(--LightGrey), var(--LightGrey)) padding-box,
                     linear-gradient(var(--gradientAngleInverse), var(--LightGrey) 50%, var(--Grey)) border-box;
-        justify-content: l;
+        justify-content: left;
     }
 
 .listImg{
