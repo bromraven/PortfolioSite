@@ -269,8 +269,7 @@ p{
     .twoStack.reverse .titleContainer {
         margin-left: 0;
         align-self: flex-end;
-        margin-right: calc(-1 * var(--radius));
-
+        margin-right: calc(-2 * var(--radius));
     }
     
         .listImg img {
