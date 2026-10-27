@@ -168,7 +168,7 @@ p{
     color: inherit;
 }
     .cardLink:hover {
-       cursor: context-menu;
+       cursor: help;
     }
 
 .titleContainer{
