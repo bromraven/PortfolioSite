@@ -1,3 +1,9 @@
+/* main.css
+   Loaded on every page. Holds: design tokens (:root), fonts, base elements,
+   header/nav, and components shared across page types (.twoStack,
+   .titleContainer, .HeroImg, ...), plus their mobile overrides.
+   Project-page-only classes live in ProjectPage.css.
+   No inline styles. */
 
 :root {
     /* colors */

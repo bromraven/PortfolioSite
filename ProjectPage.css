@@ -1,3 +1,11 @@
+/* ProjectPage.css
+   Styles used ONLY on project pages (Chair, ProductLineExtention, ...).
+   - Define classes that exist solely on project pages here.
+   - Never restyle a main.css component directly; if a project page needs a
+     different look, scope it under the body class: .projectPage .component {}
+   - Shared tokens, fonts, base elements and components live in main.css.
+   - No inline styles. */
+
 
 .center{
     align-self: center;
@@ -67,12 +75,12 @@
 }
 @media screen and (max-width: 768px) {
 
-    .titleContainer{
+    .projectPage .titleContainer{
         margin-left: 0;
-        }
+    }
 
-        .titleContainer p{
-            font-size: clamp(3px, 2vw, 30px);
-        }
+    .projectPage .titleContainer p{
+        font-size: clamp(3px, 2vw, 30px);
+    }
 
 }
