@@ -49,6 +49,13 @@
         margin: 0;
     }
 
+/* The hero-overlap margins are for the big image; inside a text card they
+   push the grid past the card's edge, so neutralize the horizontal ones. */
+.projectPage .twoStack .textContainer .HeroImg{
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .gridcontainer{
     margin-top: var(--radius);
     display: grid;
@@ -96,12 +103,6 @@
 
     .projectPage .titleContainer p{
         font-size: clamp(3px, 2vw, 30px);
-    }
-
-    /* desktop overlap margins would push the card off-screen in a column */
-    .projectPage .twoStack.reverse .textContainer{
-        margin-left: 0;
-        margin-right: 0;
     }
 
 }
