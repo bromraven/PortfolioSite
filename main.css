@@ -169,14 +169,7 @@ p{
     transition: background 300ms;
 }
     .cardLink:hover {
-       cursor: context-menu;
-        background: linear-gradient(var(--LightGrey), var(--LightGrey)) padding-box,
-                    linear-gradient(var(--gradientAngleHover), var(--LightGrey) 50%, var(--Grey)) border-box;
-    }
-
-    .twoStack.reverse .cardLink:hover {
-    background: linear-gradient(var(--LightGrey), var(--LightGrey)) padding-box,
-                linear-gradient(var(--gradientAngleHoverInverse), var(--LightGrey) 50%, var(--Grey)) border-box;
+        cursor: context-menu;
     }
 
 .titleContainer{
