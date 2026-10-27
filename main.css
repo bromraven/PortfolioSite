@@ -262,14 +262,15 @@ p{
         margin-top: calc(-1 * var(--radius));
     }
 
-    .titleContainer {
+    /* .titleContainer {
         margin-left: calc(-1 * var(--radius));
         margin-right: 0;
-    }
+    } */
 
     .twoStack.reverse .titleContainer {
         margin-left: 0;
         margin-right: calc(-1 * var(--radius));
+
     }
     
         .listImg img {
