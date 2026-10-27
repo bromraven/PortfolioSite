@@ -1,19 +1,25 @@
 
 :root {
-    --radius: clamp(1px, 3vw, 20px);
+    /* colors */
     --primaryOrange: #D69E37;
     --primaryPink: #B82584;
     --primaryGreen: #008d49;
     --LightGrey: #dfdfdf;
     --Grey: #afafaf;
-    --cardFlex: 1.5;
 
-    --gradientAngle: 15deg;
-    --gradientAngleHover: 70deg;
-    --gradientAngleInverse: -15deg;
-    --gradientAngleHoverInverse: -70deg;
+    /* padding, radius flex */
     --defaultVariablePadding: clamp(10px, 3vw, 30px);
     --border: clamp(0px, 1vw,3px);
+    --cardFlex: 1.75;
+    --radius: clamp(1px, 3vw, 20px);
+    --heroOverlap: clamp(-50px, -5vw, 0px);
+
+    /* font sizes */
+    --h1Size: clamp(20px, 3vw, 100px);
+    --h2Size: clamp(10px, 2vw, 100px);
+    --h3Size: clamp(10px, 1.5vw, 100px);
+    --pSize:  clamp(4px, 1vw, 20px);
+    --logoSize: clamp(20px, 5vw, 80px);
 }
 
 @font-face {
@@ -117,7 +123,7 @@ p{
 
 
 .logo{
-    font-size: clamp(20px, 5vw, 80px);
+    font-size: var(--logoSize);
 }
     h1.logo {
         margin: 0;
@@ -156,9 +162,9 @@ p{
     flex-direction: row-reverse;
     }
 
-    .twoStack.reverse .listImg{
+    .twoStack.reverse .HeroImg{
         margin-left: 0;
-        margin-right: var(--twoStackOverlap);
+        margin-right: var(--heroOverlap);
     }
 
 .cardLink {
@@ -175,8 +181,8 @@ p{
     flex: var(--cardFlex);
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
+    align-items: flex-start;
+    text-align: left;
     padding: var(--radius) calc(var(--radius)*2);
     margin-left: calc(-2 * var(--radius));
     border: none;
@@ -185,27 +191,29 @@ p{
 }
 
     .titleContainer.reverse{
+        /* align-items: flex-end; */
+        /* text-align: right; */
         margin-right: calc(-2 * var(--radius));
     }
 
     .titleContainer h1{
         margin: var(--radius) 0 var(--radius) 0;
         text-align: right;
-        font-size: clamp(20px, 4vw, 80px);
+        font-size: var(--h1Size);
         color: var(--primaryOrange);
         padding-bottom: var(--defaultVariablePadding);
     }
     .titleContainer h2{
         color: var(--primaryPink);
         margin: 0;
-        font-size: clamp(10px, 2vw, 80px);
+        font-size: var(--h2Size);
         padding-bottom: var(--defaultVariablePadding);
     }
 
     .titleContainer h3{
         color: var(--primaryGreen);
         margin: 0;
-        font-size: clamp(10px, 1.5vw, 80px);
+        font-size: var(--h3Size);
         font-family: FreeMono;
         font-weight: normal;
         padding-bottom: var(--defaultVariablePadding);
@@ -215,27 +223,25 @@ p{
         font-family: FreeMono, monospace;
         font-weight: normal;
         font-style: normal;
-        font-size: clamp(4px, 1.5vw, 20px);
+        font-size: var(--pSize);
     }
 
     .twoStack.reverse .titleContainer {
         margin-left: 0;
         margin-right: calc(-2 * var(--radius));
-        background: linear-gradient(var(--LightGrey), var(--LightGrey)) padding-box,
-                    linear-gradient(var(--gradientAngleInverse), var(--LightGrey) 50%, var(--Grey)) border-box;
-        justify-content: left;
     }
 
-.listImg{
+.HeroImg{
     z-index: 1;
     flex: 1;
     border-radius: var(--radius);
-    margin-left: var(--twoStackOverlap);
+    margin-left: var(--heroOverlap);
+    margin-right: 0;
     pointer-events: none;
     vertical-align: middle;
 }
 
-    .listImg img {
+    .HeroImg img {
         object-fit: contain;
         width: 100%;
         pointer-events: none;
@@ -243,12 +249,22 @@ p{
     }
 
 @media screen and (max-width: 768px) {
+
+    :root{
+    --h1Size: clamp(20px, 9vw, 100px);
+    --h2Size: clamp(10px, 5vw, 100px);
+    --h3Size: clamp(10px, 3vw, 100px);
+    --pSize:  clamp(4px, 2.5, 20px);
+    --logoSize: clamp(20px, 9vw, 80px);
+    --heroOverlap: clamp(-50px, -5vw, 0px);
+    
+    }
     
     .twoStack, .twoStack.reverse  {
         flex-direction: column;
     }
 
-    .listImg{
+    .HeroImg{
         width: 100%;
         margin-left: 0;
         margin-top: calc(-1 * var(--radius));
@@ -264,10 +280,12 @@ p{
         margin-right: calc(-2 * var(--radius));
     }
     
-        .listImg img {
+        .HeroImg img {
             width: 100%;
             height: auto;
             object-fit: contain;
         }
+
+    
 
 }
