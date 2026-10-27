@@ -262,9 +262,13 @@ p{
         margin-top: calc(-1 * var(--radius));
     }
 
-    .titleContainer,
-    .twoStack.reverse .titleContainer {
+    .titleContainer {
         margin-left: 0;
+        margin-right: clamp(20px, 10vw, 60px);
+    }
+
+    .twoStack.reverse .titleContainer {
+        margin-left: clamp(20px, 10vw, 60px);
         margin-right: 0;
     }
     
