@@ -166,7 +166,6 @@ p{
     display: flex;
     text-decoration: none;
     color: inherit;
-    transition: background 300ms;
 }
     .cardLink:hover {
        cursor: context-menu;
