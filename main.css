@@ -255,7 +255,7 @@ p{
     --h1Size: clamp(20px, 9vw, 100px);
     --h2Size: clamp(10px, 5vw, 100px);
     --h3Size: clamp(10px, 3vw, 100px);
-    --pSize:  clamp(4px, 2.5, 20px);
+    --pSize:  clamp(4px, 2.5vw, 20px);
     --logoSize: clamp(20px, 9vw, 80px);
     --heroOverlap: clamp(-50px, -5vw, 0px);
     
