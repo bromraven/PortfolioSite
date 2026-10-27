@@ -27,6 +27,7 @@
 .textContainer{
     flex: var(--projectFlex);
     min-width: 0;
+    text-align: left;
     background-color: var(--LightGrey);
     padding: var(--radius); 
     transition-property: all;
