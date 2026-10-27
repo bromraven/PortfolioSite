@@ -191,12 +191,6 @@ p{
     border-radius: var(--radius);
 }
 
-    .titleContainer.reverse{
-        /* align-items: flex-end; */
-        /* text-align: right; */
-        margin-right: calc(-2 * var(--radius));
-    }
-
     .titleContainer h1{
         margin: var(--radius) 0 var(--radius) 0;
         font-size: var(--h1Size);
