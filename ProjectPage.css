@@ -55,6 +55,16 @@
         text-align: left;
     }
 
+
+.imgContainer{
+    z-index: 1;
+    flex: 1;
+    border-radius: var(--radius);
+    margin: var(--radius);
+    margin-right: 0;
+    pointer-events: none;
+    vertical-align: middle;
+}
 @media screen and (max-width: 768px) {
 
     .titleContainer{
