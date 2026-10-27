@@ -260,7 +260,13 @@ p{
         width: 100%;
         margin-left: 0;
         margin-top: calc(-1 * var(--radius));
-    }   
+    }
+
+    .titleContainer,
+    .twoStack.reverse .titleContainer {
+        margin-left: 0;
+        margin-right: 0;
+    }
     
         .listImg img {
             width: 100%;
