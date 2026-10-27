@@ -159,7 +159,7 @@ p{
 
 .twoStack.reverse {
     display: flex;
-    text-align: justify;
+    text-align: right;
     flex-direction: row-reverse;
     }
 
@@ -199,7 +199,6 @@ p{
 
     .titleContainer h1{
         margin: var(--radius) 0 var(--radius) 0;
-        text-align: right;
         font-size: var(--h1Size);
         color: var(--primaryOrange);
         padding-bottom: var(--defaultVariablePadding);
@@ -230,6 +229,8 @@ p{
     .twoStack.reverse .titleContainer {
         margin-left: 0;
         margin-right: calc(-2 * var(--radius));
+        align-items: flex-end;
+        text-align: right;
     }
 
 .HeroImg{
