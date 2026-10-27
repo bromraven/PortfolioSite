@@ -7,6 +7,11 @@
    - No inline styles. */
 
 
+.projectPage{
+    /* shared flex weight: text/grid column and image column split the row */
+    --projectFlex: 1.5;
+}
+
 .center{
     align-self: center;
 }
@@ -20,7 +25,8 @@
 }
 
 .textContainer{
-    flex: 1.5;
+    flex: var(--projectFlex);
+    min-width: 0;
     background-color: var(--LightGrey);
     padding: var(--radius); 
     transition-property: all;
@@ -66,13 +72,21 @@
 
 .imgContainer{
     z-index: 1;
-    flex: 1;
+    flex: var(--projectFlex);
+    min-width: 0;
     border-radius: var(--radius);
     margin: var(--radius);
     margin-right: 0;
     pointer-events: none;
     vertical-align: middle;
 }
+
+    .imgContainer img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
 @media screen and (max-width: 768px) {
 
     .projectPage .titleContainer{
