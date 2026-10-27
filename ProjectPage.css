@@ -97,4 +97,10 @@
         font-size: clamp(3px, 2vw, 30px);
     }
 
+    /* desktop overlap margins would push the card off-screen in a column */
+    .projectPage .twoStack.reverse .textContainer{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
 }
