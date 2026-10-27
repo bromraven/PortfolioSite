@@ -262,10 +262,9 @@ p{
         margin-top: calc(-1 * var(--radius));
     }
 
-    /* .titleContainer {
-        margin-left: calc(-1 * var(--radius));
-        margin-right: 0;
-    } */
+    .titleContainer {
+        align-self: flex-start;
+    }
 
     .twoStack.reverse .titleContainer {
         margin-left: 0;
